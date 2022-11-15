@@ -1,0 +1,38 @@
+.component.media-content {
+  margin-bottom: 2rem;
+
+  .row {
+    align-items: center;
+  }
+
+  .content, .the-media {
+    @include make-col(12);
+    @include make-col-ready();
+  }
+  .content {
+    order: 1;
+  }
+  .the-media {
+    order: 2;
+  }
+
+  &.text-center {
+    .row {
+      justify-content: center;
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    .content, .the-media {
+      @include make-col(6);
+    }
+    &.content-right {
+      .content {
+        order: 2;
+      }
+      .the-media {
+        order: 1;
+      }
+    }
+  }
+}
