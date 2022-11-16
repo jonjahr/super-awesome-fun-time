@@ -23,5 +23,24 @@ $spacing-m: 1rem;
 $spacing-s: 0.5rem;
 $spacing-xs: 0.25rem;
 
+// UI
+$button-radius: 0.375rem;
+
 // Easing
 $easeOutQuint: cubic-bezier(0.22, 1, 0.36, 1);
+
+// Add hover styles only if the browser is non-touch
+// $extra-selector: optional states to also apply the 
+// hover styles to, ie. '&:focus, &:focus-visible'
+@mixin hover($extra-selector: false) {
+  @media (hover: hover) {
+    &:hover {
+      @content;
+    }
+  }
+  @if $extra-selector {
+    #{$extra-selector} {
+      @content;
+    }
+  }
+}

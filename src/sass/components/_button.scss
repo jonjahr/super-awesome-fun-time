@@ -1,13 +1,28 @@
-// Base styles
 .btn {
+  // Reset
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+
+  // Base styles
   padding: 0.5em 1.4em;
   font-size: 18px;
   font-weight: 500;
+  border-radius: $button-radius;
+  border-width: 1px;
+  border-style: solid;
   transition: color 200ms, background-color 200ms, border-color 200ms;
+
+  &:focus-visible {
+    outline-style: solid;
+    outline-offset: 2px;
+  }
 
   &.fill-outline {
     background-color: transparent;
-    border-width: 1px;
   }
 
   // Generate button fill variants for a given color
@@ -31,10 +46,14 @@
 
     // Hover and focus styles (shared)
     &.fill-solid, &.fill-outline, &.fill-inverted {
-      &:hover, &:focus {
+      @include hover('&:focus, &:focus-visible') {
         border-color: $hover-color;
         background-color: $hover-color;
         color: white;
+      }
+      
+      &:focus-visible {
+        outline-color: $hover-color;
       }
     }
   }
