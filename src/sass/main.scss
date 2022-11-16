@@ -41,16 +41,8 @@
 @import "~bootstrap/scss/helpers";
 @import "~bootstrap/scss/utilities/api";
 
+@import "global";
 
 @import "./components/index";
 
-body {
-  background: #fff;
-  padding-top: $nav-link-height + 1;
-}
-
-img {
-  // default responsive image
-  max-width: 100%;
-}
 

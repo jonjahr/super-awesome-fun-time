@@ -1,0 +1,18 @@
+// Global styles
+
+body {
+  background: #fff;
+
+  // Nav height CSS variable for easier styling
+  @include media-breakpoint-down(lg) {
+    --nav-height: #{$nav-height-mobile};
+  }
+  @include media-breakpoint-up(lg) {
+    --nav-height: #{$nav-height};
+  }
+}
+
+img {
+  // default responsive image
+  max-width: 100%;
+}
