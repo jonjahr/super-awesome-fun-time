@@ -50,8 +50,25 @@ module.exports = (env, options) => ({
         },
       },
       {
-        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        test: /\.svg$/i,
+        type: "asset",
+        use: "svgo-loader",
+        parser: {
+          dataUrlCondition: {
+            // Inline SVGs up to 4KB
+            maxSize: 4 * 1024,
+          }
+        },
+        generator: {
+          filename: "static/[name].[hash][ext]"
+        },
+      },
+      {
+        test: /\.(png|jpg|jpeg|gif)$/i,
         type: "asset/resource",
+        generator: {
+          filename: "static/[name].[hash][ext]"
+        },
       },
       {
         test: /\.html$/i,
