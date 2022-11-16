@@ -18,6 +18,10 @@ What I didn't change:
 * Image optimization.  All the images are SVGs, and I didn't look deeply to see if they could be optimized by converting them to WEBP/PNG/JPG.  In a production app my first choice would be to serve images from a CDN like Imgix and then create an image component that generates a `srcset` attribute using the CDN's image transforms.  My second choice would be to generate sets of optimized scaled images at build time with something like [webpack-image-srcset-loader](https://github.com/Calvin-LL/webpack-image-srcset-loader) and then create an image component that generates a `srcset` attribute from the built image set.
 * All the other page blocks remain the same, except for the hero.  I would have liked to update them to match the Figma design but I ran out of time.  
 
+## Deployed to Netlify:
+
+[jonjahr-super-awesome-kong-site.netlify.app](https://jonjahr-super-awesome-kong-site.netlify.app/?utm_source=email&utm_medium=web&utm_campaign=awesome&utm_term=amazing&utm_content=hello&not_a_utm_param=not-included)
+
 ## Quick Start
 
 * Clone the repo
