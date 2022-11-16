@@ -1,0 +1,52 @@
+// Base styles
+.btn {
+  padding: 0.5em 1.4em;
+  font-size: 18px;
+  font-weight: 500;
+  transition: color 200ms, background-color 200ms, border-color 200ms;
+
+  &.fill-outline {
+    background-color: transparent;
+    border-width: 1px;
+  }
+
+  // Generate button fill variants for a given color
+  @mixin button-fill-variants($color, $hover-color) {
+    &.fill-solid {
+      border-color: $color;
+      background-color: $color;
+      color: white;
+    }
+
+    &.fill-outline {
+      border-color: $color;
+      color: $color;
+    }
+
+    &.fill-inverted {
+      border-color: white;
+      background-color: white;
+      color: $color;
+    }
+
+    // Hover and focus styles (shared)
+    &.fill-solid, &.fill-outline, &.fill-inverted {
+      &:hover, &:focus {
+        border-color: $hover-color;
+        background-color: $hover-color;
+        color: white;
+      }
+    }
+  }
+
+  // Blue button
+  &.color-blue {
+    @include button-fill-variants($blue, $blue-hover);
+  }
+
+  // Green button
+  &.color-green {
+    @include button-fill-variants($green, $green-hover);
+  }
+
+}
