@@ -1,0 +1,50 @@
+@mixin style-h1 {
+  font-weight: 700;
+
+  @include media-breakpoint-down(md) {
+    font-size: 40px;
+    line-height: 44px;
+  }
+  
+  @include media-breakpoint-up(md) {
+    font-size: 48px;
+    line-height: 57.6px;
+  }
+}
+
+@mixin style-h2 {
+  // Figma calls for 600 but Google Fonts doesn't have it :/
+  font-weight: 700;
+
+  @include media-breakpoint-down(md) {
+    font-size: 30px;
+    line-height: 36px;
+  }
+  
+  @include media-breakpoint-up(md) {
+    font-size: 36px;
+    line-height: 44px;
+  }
+}
+
+@mixin style-h3 {
+  // Figma calls for 600 but Google Fonts doesn't have it :/
+  font-weight: 700;
+
+  @include media-breakpoint-down(md) {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  
+  @include media-breakpoint-up(md) {
+    font-size: 22px;
+    line-height: 26px;
+  }
+}
+
+@mixin style-body {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
