@@ -1,0 +1,49 @@
+// Show and hide navbar on scroll.  ".hidden" class added via JS.
+.navbar {
+  transition: transform 400ms $easeOutQuint;
+
+  &.hidden {
+    transform: translateY(-110%);
+  }
+}
+
+// Kong logo
+.navbar-brand {
+  width: 104px;
+  margin-right: 32px;
+}
+
+// Navbar links
+.nav-link {
+  color: white;
+
+  // Ideally needs a different look for hover/active,
+  // such as this underline
+  // &:hover, &.active {
+  //   text-decoration: underline;
+  // }
+
+}
+
+// Navbar link padding
+// Override _navbar.scss
+// Not ideal CSS but let's not dig any further for now
+.navbar-expand-lg .navbar-nav .nav-link {
+  @include media-breakpoint-up(xl) {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+// Search input
+.form-control {
+  border: none;
+
+  @include media-breakpoint-down(xl) {
+    margin-right: $spacing-s;
+  }
+
+  @include media-breakpoint-up(xl) {
+    margin-right: $spacing-l;
+  }
+}
