@@ -1,4 +1,27 @@
+// Typography
 $font-family-sans-serif: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
 
-$primary: #1155cb;
-$secondary: #17a956;
+// Colors
+$blue: #1155cb;
+$blue-hover: darken($blue, 20%);
+$green: #17a956;
+$green-hover: darken($green, 20%);
+$slate: #35363A;
+$primary: $blue;
+$secondary: $green;
+
+// Layout
+$nav-height: 63px;
+$nav-height-mobile: 60px;
+
+// Spacing (copied from utility classes)
+$spacing-3xl: 6rem;
+$spacing-2xl: 4rem;
+$spacing-xl: 3rem;
+$spacing-l: 1.5rem;
+$spacing-m: 1rem;
+$spacing-s: 0.5rem;
+$spacing-xs: 0.25rem;
+
+// Easing
+$easeOutQuint: cubic-bezier(0.22, 1, 0.36, 1);
