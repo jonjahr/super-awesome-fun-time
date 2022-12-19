@@ -30,3 +30,5 @@ What I didn't change:
 * Run in dev mode: `npm run start`
 * Run in prod mode: `npm run build; cd dist; npx serve -p 8080`
 * Run the Jest tests: `npm run test`
+
+Test
